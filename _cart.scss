@@ -40,7 +40,6 @@ margin-top: 127px;
         font-weight: 400;
         line-height: 20px;
         letter-spacing: 0px;
-
     }
     &__item {
         border-top: 0.5px solid rgb(202, 205, 216);
@@ -134,19 +133,22 @@ font-family: Montserrat;
         grid-column: span 4;
         
     }
+    &__text {
+        display: flex;
+    }
 &__form-bigtext {
-width: 379px;
-height: 36px;
-display: flex;
-justify-content: center;
-color: $second-color;
-font-family: Montserrat;
-font-size: 24px;
-font-weight: 700;
-line-height: 29px;
-letter-spacing: 0px;
-text-align: center;
-padding-top: 42px;
+
+    width: 379px;
+    height: 36px;
+
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: center;
+    
 }
 
 &__reg {

@@ -27,6 +27,12 @@ a.menu:hover {
   padding-right: calc(50% - 600px);
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .top {
   height: 735px;
   background-image: url(img/topback.jpg);
@@ -35,41 +41,37 @@ a.menu:hover {
   background-size: cover;
   text-decoration-color: #FFFFFF;
 }
-
-.top__catalog {
-  height: 400px;
-  background-image: url(img/top_catalog.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-decoration-color: #FFFFFF;
-}
-
-.top__content_catalog {
-  margin-top: 128px;
-}
-
-.top__catalog_title {
-  color: rgb(255, 255, 255);
-  font-family: Montserrat;
-  font-size: 64px;
-  font-weight: 600;
-  line-height: 70px;
-  letter-spacing: 0%;
-  text-align: left;
-}
-
 .top__menu {
   display: flex;
   gap: 32px;
 }
+.top__title {
+  color: #FFFFFF;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 70px;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 70px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.top__text {
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 32px;
+}
+.top__link {
+  color: #FFFFFF;
+}
 
 .menu-mobile {
   display: none;
-}
-
-.top__title {
-  color: #FFFFFF;
 }
 
 h1.top__catalog_title {
@@ -80,15 +82,6 @@ h1.top__catalog_title {
   line-height: 70px;
   letter-spacing: 0%;
   text-align: left;
-}
-
-.top__text {
-  color: #FFFFFF;
-  font-family: Montserrat;
-}
-
-.link {
-  color: #FFFFFF;
 }
 
 .header__input {
@@ -123,12 +116,6 @@ h1.top__catalog_title {
   color: #FFFFFF;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
 .menu {
   text-decoration: none;
   font-size: 16px;
@@ -143,28 +130,6 @@ body {
   line-height: 20px;
   letter-spacing: 0%;
   text-align: left;
-}
-
-.top__title {
-  margin-top: 64px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 70px;
-  font-family: Montserrat;
-  font-size: 64px;
-  font-weight: 600;
-  line-height: 70px;
-  text-align: left;
-  text-underline-position: from-font;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-}
-
-.top__text {
-  margin-bottom: 16px;
-  font-size: 24px;
-  line-height: 32px;
 }
 
 .option {
@@ -424,8 +389,13 @@ li {
   list-style-type: none;
 }
 
+.bottom {
+  margin-top: 39px;
+}
+
 .bottom-link {
   color: #000000;
+  text-decoration: underline;
 }
 
 .footer {
@@ -547,7 +517,7 @@ a.contact {
 .button {
   margin-top: 8px;
   background: rgba(222, 215, 215, 0.41);
-  border: 1px solid #FFFFFF;
+  border: 1px solid rgba(222, 215, 215, 0.41);
   box-sizing: border-box;
   border-radius: 16px;
   height: 40px;
@@ -751,11 +721,12 @@ img {
   height: 556px;
   grid-column: span 4;
 }
+.cart__text {
+  display: flex;
+}
 .cart__form-bigtext {
   width: 379px;
   height: 36px;
-  display: flex;
-  justify-content: center;
   color: rgb(0, 0, 0);
   font-family: Montserrat;
   font-size: 24px;
@@ -763,7 +734,6 @@ img {
   line-height: 29px;
   letter-spacing: 0px;
   text-align: center;
-  padding-top: 42px;
 }
 .cart__reg {
   display: flex;
@@ -1129,24 +1099,21 @@ summary::-webkit-details-marker {
   z-index: 10;
 }
 
-.button {
+.filter-button-wrapper {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  border: 1px solid #000000;
-  border-radius: 20px;
-  min-height: 40px;
-  font: inherit;
-  padding: 10px 23px;
-  cursor: pointer;
-  background-color: #FFFFFF;
-}
-
-.filter-button-wrapper {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  box-sizing: border-box;
+  width: 182px;
+  height: 40px;
+  border-radius: 20px;
+  min-height: 40px;
+  font: inherit;
+  cursor: pointer;
+  background-color: #FFFFFF;
 }
 
 .filtering-form__content-wrapper {
@@ -1178,6 +1145,8 @@ summary::-webkit-details-marker {
 }
 
 .filtering-form__button {
+  margin: 0;
+  padding: 0;
   align-self: flex-end;
   max-width: 190px;
   position: relative;
@@ -1189,6 +1158,14 @@ summary::-webkit-details-marker {
   align-items: center;
   gap: 10px;
   padding: 10px 76px 10px 76px;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  min-height: 40px;
+  font: inherit;
+  padding: 10px 23px;
+  cursor: pointer;
+  background-color: #FFFFFF;
 }
 
 .radio {
@@ -1450,8 +1427,8 @@ summary::-webkit-details-marker {
 
 @media (max-width: 1024px) {
   .center {
-    padding-left: calc(50% - 393px);
-    padding-right: calc(50% - 393px);
+    padding-left: calc(50% - 394px);
+    padding-right: calc(50% - 394px);
   }
   .for.for__catalog {
     height: 268px;
@@ -1491,6 +1468,21 @@ summary::-webkit-details-marker {
   }
   .cart__form {
     margin-top: 64px;
+  }
+  .cart__reg {
+    padding-left: 27px;
+    padding-right: 61px;
+  }
+  .button-right {
+    border-radius: 50px;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: center;
   }
 }
 @media (max-width: 783px) {
